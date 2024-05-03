@@ -19,30 +19,31 @@
 
 </head>
 
-<body class="flex justify-center items-center">
-  <main>
-    <div class="imgbx">
-      <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+<body class="flex flex-col justify-center items-center">
+  <main class="md:p-7 md:flex md:flex-row md:gap-6">
+    <div class="imgbx md:order-2">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="md:hidden">
+      <!-- <img src="assets/images/illustration-sign-up-desktop.svg" alt="" class="hidden md:block"> -->
     </div>
 
-    <div class="contentbx mt-4 flex flex-col gap-3">
+    <div class="contentbx mt-4 md:mt-4 flex flex-col gap-2">
 
 
 
       <h2 class="font-bold">Stay updated!</h2>
 
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul class="mt-3 flex flex-col gap-3 ">
+      <ul class="md:text-base mt-3 flex flex-col gap-3 md:gap-2 ">
         <li><img src="assets/images/icon-success.svg" alt="">Product discovery and building what matters</li>
         <li><img src="assets/images/icon-success.svg" alt="">Measuring to ensure updates are a success</li>
         <li><img src="assets/images/icon-success.svg" alt="">And much more!</li>
       </ul>
 
-      <form action="" class="mt-6 flex flex-col gap-1">
+      <form action="" class="mt-6 md:mt-4 flex flex-col gap-1 relative">
         <label for="" class="text-xs font-bold">Email address</label>
-        <input type="email" placeholder="email@company.com" class="border p-4">
-        <label id="email_validation1" for="" class="text-red-600 text-xs -mt-1">This field can not be empty!</label>
-        <button id="" class="subscribe-Btn p-4 mt-1" onclick="openDialog(event)">Subscribe to monthly newsletter</button>
+        <input id="email" type="email" placeholder="email@company.com" class="p-4 md:py-3">
+        <label id="email-validation" for="" class="text-red-500 text-xs  absolute right-0 hidden">Valid email required</label>
+        <button id="subscribe-Btn" class="subscribe-Btn p-4 md:py-3 mt-1" >Subscribe to monthly newsletter</button>
 
       </form>
 
@@ -50,8 +51,8 @@
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
-     <dialog id="myDialog" class="dialog px-5 py-6 flex flex-col justify-center gap-7 ">
-      <img src="assets/images/icon-success.svg" alt="" class="w-14">
+     <dialog id="myDialog" class="dialog px-5 py-6 md:py-0 flex-col justify-center gap-7 md:gap-2 hidden">
+      <img src="assets/images/icon-success.svg" alt="" class="w-14 md:w-8">
       <h2 class="text-4xl font-bold">Thanks for subscribing!</h2>
       <p class="text-sm">A confirmation email has been sent to <b>ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
       <button class="dialog-btn p-4" onclick="closeDialog()">Dismiss message</button>
@@ -59,12 +60,14 @@
     </dialog>
     <!-- Success message end -->
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#"><small>SURU EMMANUEL</small></a>.
-    <!-- </div> -->
+    
 
   </main>
+  <div class="attribution text-xs text-center md:text-slate-200">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#"><b>SURU EMMANUEL</b></a>.
+  </div>
+
 
   <script src="main.js"></script>
 </body>

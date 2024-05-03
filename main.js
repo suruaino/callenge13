@@ -19,3 +19,24 @@ function closeDialog(){
     dialog.close();
     dialog.style.display ="none";
 }
+
+
+//Email validation!!!
+const emailValidation = document.getElementById("email-validation");
+const subscribeBtn = document.getElementById("subscribe-Btn");
+subscribeBtn.addEventListener("click", (event) => {
+    console.log("btn is clicked")
+    event.preventDefault();
+    let email = document.getElementById("email");
+    if(email.value == ""){
+        email.style.borderColor = "red";
+        email.style.borderWidth = "1px";
+        emailValidation.style.display = "block";
+        
+        // openDialog() = false;
+        // location.reload =false;
+    } else{
+        email.style.borderColor = "green";
+        email.style.borderWidth = "1px";
+    }
+})

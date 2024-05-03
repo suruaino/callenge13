@@ -5,6 +5,7 @@
 }
 
 :root{
+    --pri_clr-1: hsl(342, 100%, 67%);
     --pri_clr: hsl(4, 100%, 67%);
     --Dark_Slate_Grey: hsl(234, 29%, 20%);
     --Charcoal_Grey: hsl(235, 18%, 26%);
@@ -14,6 +15,9 @@
 body{
     font-family: 'Roboto', sans-serif;
     color: var(--Dark_Slate_Grey);
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
 }
 main{
     width: 100%;
@@ -26,7 +30,6 @@ main{
     width: 100%;
 }
 .imgbx{
-
     height: 40%;
 }
 .contentbx{
@@ -54,20 +57,24 @@ li img{
 
 form input{
     border-radius: 8px;
-
+    border: 1px solid gray;
 }
 
 .subscribe-Btn{
     background-color: var(--Dark_Slate_Grey);
     color: var(--White);
     border-radius: 10px;
+    transition: .3s;
+}
+.subscribe-Btn:hover,
+.subscribe-Btn:active{
+ background: linear-gradient(to right, var(--pri_clr-1), var(--pri_clr) );
 }
 
 .dialog{
     width: 100%;
     max-width: 23.5rem;
     min-height: 100vh;
-    box-shadow: 0 0 4px gray;
     box-shadow: 0 0 4px gray;
     border-radius: 8px;
     background-color: white;
@@ -80,8 +87,8 @@ form input{
 
 }
 dialog::backdrop {
-    backdrop-filter: blur(5px); /* Apply a backdrop filter to the backdrop */
-    background-color: rgb(0, 0, 0); /* Semi-transparent background */
+    backdrop-filter: blur(5px);
+    background-color: rgb(0, 0, 0);
   }
 dialog h2,
 dialog p,
@@ -101,4 +108,58 @@ dialog img{
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 2.5rem);
+}
+.dialog-btn:hover,
+.dialog-btn:active{
+background: linear-gradient(to right, var(--pri_clr-1), var(--pri_clr) );
+}
+@media (min-width: 768px) {
+    body{
+        background-color: var(--Charcoal_Grey);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        background-color: var(--White);
+        width: 100%;
+        max-width: 75%;
+        height: 100%;
+        max-height: 75%;
+        border-radius: 30px;
+    }
+    .contentbx h2{
+        font-size: 3rem;
+    }
+  
+    .imgbx{
+        background: url(assets/images/illustration-sign-up-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        max-width: 95%;
+        border-radius: 20px;
+    }
+ 
+    .contentbx{
+        padding: 2rem;
+    }
+    .dialog{
+        min-height: 60vh;
+        inset-block: 30%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        border-radius: 30px;
+    
+    }
+    .dialog-btn{
+        position: static;
+        bottom: 1rem;
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+    }
 }
