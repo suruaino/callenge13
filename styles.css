@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pri_clr: hsl(4, 100%, 67%);
+    --Dark_Slate_Grey: hsl(234, 29%, 20%);
+    --Charcoal_Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--Dark_Slate_Grey);
+}
+main{
+    width: 100%;
+    max-width: 23.5rem;
+    position: relative;
+    box-shadow: 0 0 4px gray;
+}
+.imgbx,
+.contentbx{
+    width: 100%;
+}
+.imgbx{
+
+    height: 40%;
+}
+.contentbx{
+    height: 60%;
+    padding: 1rem;
+    
+}
+.contentbx p,
+.contentbx ul li{
+    color: var(--Charcoal_Grey);
+    font-weight: 500;
+}
+.contentbx h2{
+    color: var(--Dark_Slate_Grey);
+    font-size: 2.5rem;
+}
+li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+li img{
+    width: 1.3rem;
+}
+
+form input{
+    border-radius: 8px;
+
+}
+
+.subscribe-Btn{
+    background-color: var(--Dark_Slate_Grey);
+    color: var(--White);
+    border-radius: 10px;
+}
+/* .dialog_container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 100 ;
+} */
+.dialog{
+    width: 100%;
+    max-width: 23.5rem;
+    height: fit-content;
+    box-shadow: 0 0 4px gray;
+    box-shadow: 0 0 4px gray;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid black;
+    /* border-radius: 8px; */
+    position: absolute;
+    inset: 0;
+    border: 2px solid red;
+    /* transform: translate(-50%, -50%); */
+    /* display: none; */
+}
+dialog::backdrop {
+    backdrop-filter: blur(5px); /* Apply a backdrop filter to the backdrop */
+    background-color: rgb(0, 0, 0); /* Semi-transparent background */
+  }
+dialog h2,
+dialog p,
+dialog button{
+    width: 100%;
+}
+dialog img{
+    width: 1.5rem;
+}
+
+.dialog-btn{
+    background-color: var(--Dark_Slate_Grey);
+    color: var(--White);
+    border-radius: 10px;
+}

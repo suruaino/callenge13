@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body class="flex justify-center items-center">
+  <main>
+    <div class="imgbx">
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="">
+    </div>
+
+    <div class="contentbx mt-4 flex flex-col gap-3">
+
+
+
+      <h2 class="font-bold">Stay updated!</h2>
+
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul class="mt-3 flex flex-col gap-3 ">
+        <li><img src="assets/images/icon-success.svg" alt="">Product discovery and building what matters</li>
+        <li><img src="assets/images/icon-success.svg" alt="">Measuring to ensure updates are a success</li>
+        <li><img src="assets/images/icon-success.svg" alt="">And much more!</li>
+      </ul>
+
+      <form action="" class="mt-6 flex flex-col gap-1">
+        <label for="" class="text-xs font-bold">Email address</label>
+        <input type="email" placeholder="email@company.com" class="border p-4">
+        <label id="email_validation1" for="" class="text-red-600 text-xs -mt-1">This field can not be empty!</label>
+        <button id="" class="subscribe-Btn p-4 mt-1" onclick="openDialog(event)">Subscribe to monthly newsletter</button>
+
+      </form>
+
+    </div>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+     <dialog id="myDialog" class="dialog px-4 py-6 flex flex-col justify-center gap-10 ">
+      <img src="assets/images/icon-success.svg" alt="" class="w-14">
+      <h2 class="text-4xl font-bold">Thanks for subscribing</h2>
+      <p class="text-sm">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+      <button class="dialog-btn" onclick="closeDialog()">Dismiss message</button>
+     
+    </dialog>
+    <!-- Success message end -->
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#"><small>SURU EMMANUEL</small></a>.
+    <!-- </div> -->
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
